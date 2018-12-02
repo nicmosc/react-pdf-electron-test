@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "rootDirs": ["./src"],
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/app/*"]
+    },
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "esnext",
+    "jsx": "react",
+    "allowJs": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  }
+}
