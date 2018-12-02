@@ -13,7 +13,7 @@ const rootDirs = [
 
 module.exports = {
   entry: [
-    './src/app/index.tsx',
+    './src/app/index.jsx',
   ],
   target: 'electron-renderer',
   mode: process.env.APP_ENV,
@@ -25,7 +25,7 @@ module.exports = {
     globalObject: 'this',
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js', '.jsx' ],
+    extensions: [ '.js', '.jsx' ],
     alias: {
       '~': path.resolve(__dirname, 'src/app'),
     },
@@ -39,12 +39,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.jsx?$/,
         include: rootDirs,
-        use: [
-          'babel-loader',
-          'awesome-typescript-loader',
-        ],
+        use: [{
+          loader: 'babel-loader',
+        }],
       },{
         test: /\.css$/,
         use: [

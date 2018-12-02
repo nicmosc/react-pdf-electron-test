@@ -15,7 +15,7 @@ function App() {
         <MyDocument />
       </PDFViewer>
       <BlobProvider document={MyDocument()}>
-        {({ url }: { url: string }) => <iframe src={url} style={{ width: '100%', height: '100%' }} />}
+        {({ url }) => <iframe src={url} style={{ width: '100%', height: '100%' }} />}
       </BlobProvider>
     </div>
   );
